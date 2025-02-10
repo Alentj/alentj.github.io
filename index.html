@@ -15,6 +15,19 @@
             text-align: center;
             scroll-behavior: smooth;
         }
+        .dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+        .project-card {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
         
         /* Navbar Styling */
         nav {
@@ -82,12 +95,61 @@
         .btn:hover {
             background-color: #0056b3;
         }
+        .fade-in {
+    opacity: 10;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
     </style>
 </head>
-<body>
 
+
+
+<script>
+const sections = document.querySelectorAll('.fade-in');
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight - 50) {
+            section.classList.add('show');
+        }
+    });
+});
+</script>
+
+<body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("dark-mode-toggle").onclick = function () {
+            document.body.classList.toggle("dark-mode");
+        };
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const text = "Welcome Gaddies!";
+        let index = 0;
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typing-effect").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100);
+            }
+        }
+        typeEffect();
+    });
+</script>
     <!-- Navbar -->
     <nav>
+    <button id="dark-mode-toggle" class="btn">Toggle Dark Mode</button>
+
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -100,37 +162,58 @@
     </header>
 
     <!-- Home Section -->
-    <section>
-        <h1>Welcome Gaddieess!</h1>
-        <p>Hi, I'm Alen. This is my personal webpage where I showcase my projects and interests.</p>
-        <a href="https://github.com/alentj" target="_blank" class="btn">Visit My GitHub</a>
-    </section>
+   <section>
+    <h1 id="typing-effect"></h1>
+    <p>Hi, I'm Alen. This is my personal webpage where I showcase my projects and interests.</p>
+    <a href="https://github.com/alentj" target="_blank" class="btn">Visit My GitHub</a>
+</section>
+
+
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>I am a CSE student passionate about web development and IoT projects.</p>
-    </section>
+    <h2>About Me</h2>
+    <img src="your-image.jpg" alt="Alen's Profile" width="200" height="200" style="border-radius: 50%;">
+    <p>I am a CSE student passionate about web development and IoT projects.</p>
+</section>
+
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
-        <p>Here are some of the projects I have worked on:</p>
-        <ol>
-            <li>Step Counter with Arduino</li>
-            <li> Voice-Controlled Wheelchair on Progress</li>
-            <li> On Progress  Men At Work!!</li>
-        </ol>
-    </section>
+    <h2>My Projects</h2>
+    <div class="project-card">
+        <h3>Step Counter with Arduino</h3>
+        <p>A step counter using a piezoelectric sensor.</p>
+        <a href="your-github-link" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Voice-Controlled Wheelchair</h3>
+        <p>Currently in progress.</p>
+        <a href="#" class="btn">Coming Soon</a>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <ul>
-    <p> GitHub:<a href="https://github.com/alentj" target="_blank">GitHub Profile</a></p>
-    <p>Instagram :<a href="https://www.instagram.com/alen.tj_/" target="_blank">Alentj</a></p>
-     <p> Mobile:<a href="+91 7012752364" target="_blank">+91 7012752364</a></p>
-   <p>Email: <a href="mailto:mail2alentj@gmail.com">mail2alentj@gmail.com</a></p>
+   <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <a href="https://github.com/alentj" target="_blank">
+        <img src=""download .png"g" alt="GitHub" width="30">
+    </a>
+    <a href="https://www.instagram.com/alen.tj_/" target="_blank">
+        <img src="download (1).png" alt="Instagram" width="30">
+    </a>
+</section>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
 </section>
 
 </ul>
@@ -140,9 +223,18 @@
 
     <!-- Footer -->
     <footer>
-         Alen : Built with ❤️ 
+         Made for You Gaddiie
     </footer>
-
+<script>
+const sections = document.querySelectorAll('.fade-in');
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight - 50) {
+            section.classList.add('show');
+        }
+    });
+});
+</script>
 </body>
 </html>
-
