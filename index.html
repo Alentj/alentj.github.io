@@ -4,261 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alen's Website</title>
-    <style>
-        /* General Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4; /* Light Background */
-            color: #333; /* Dark Text */
-            text-align: center;
-            scroll-behavior: smooth;
-        }
-       
-
-        .project-card {
-    background: #fff;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-        
-        /* Navbar Styling */
-        nav {
-            background-color: #434343;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-       nav a:hover {
-    background-color: white; /* Turns black */
-    color: black; /* Text stays white */
-    border-radius: 5px;
-}
-        /* Header */
-        header {
-            padding: 80px 20px 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 80px 20px;
-            background-color: white;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .content {
-            padding: 40px;
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color:  #434343;
-            color: white;
-            padding: 15px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            text-decoration: none;
-            background-color:  #434343;
-            color: white;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-        .fade-in {
-    opacity: 10;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-
-
-<script>
-const sections = document.querySelectorAll('.fade-in');
-window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight - 50) {
-            section.classList.add('show');
-        }
-    });
-});
-</script>
-
 <body>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const text = "Welcome Gaddies!";
-        let index = 0;
-        function typeEffect() {
-            if (index < text.length) {
-                document.getElementById("typing-effect").innerHTML += text.charAt(index);
-                index++;
-                setTimeout(typeEffect, 900);
-            }
-        }
-        typeEffect();
-    });
-    <script>
-    const text = "Welcome to My Personal Webpage"; // Text to type
-    let index = 0;
-
-    function typeEffect() {
-        if (index < text.length) {
-            document.getElementById("typing-effect").innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeEffect, 1500); // Typing speed (adjust for faster/slower effect)
-        }
-    }
-
-    window.onload = function() {
-        typeEffect(); // Start the typing effect when the page loads
-    };
-</script>
-
-</script>
     <!-- Navbar -->
     <nav>
-    
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="/about/about.html">About</a>
+        <a href="/project/project.html">Projects</a>
+        <a href="/contact/contact.html">Contact</a>
     </nav>
 
     <!-- Header Section -->
-    <header id="home">
-       Oru website
-    </header>
+    
+        
+        <h1> website </h1>
+   
 
     <!-- Home Section -->
-<!-- Home Section -->
-<section>
-    <h1 id="typing-effect"></h1>
-    <p>Hi, I'm Alen. This is my personal webpage where I showcase my projects and interests.</p>
-    <a href="https://github.com/alentj" target="_blank" class="btn">Visit My GitHub</a>
-</section>
-
-<!-- JavaScript for Typing Effect -->
-<script>
-    const text = "Welcome to My Personal Webpage"; // Text to type
-    let index = 0;
-
-    function typeEffect() {
-        if (index < text.length) {
-            document.getElementById("typing-effect").innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeEffect, 1500); // Typing speed (adjust for faster/slower effect)
-        }
-    }
-
-    window.onload = function() {
-        typeEffect(); // Start the typing effect when the page loads
-    };
-</script>
-
-
-
+    <section class="fade-in">
+        <h1 id="typing-effect"></h1>
+        <p>Hi, I'm Alen. This is my personal webpage where I showcase my projects and interests.</p>
+        <a href="https://github.com/alentj" target="_blank" class="btn">Visit My GitHub</a>
+    </section>
 
     <!-- About Section -->
-    <section id="about">
-    <h2>About Me</h2>
-    <img src="your-image.jpg" alt="Alen's Profile" width="200" height="200" style="border-radius: 50%;">
-    <p>I am a CSE student passionate about web development and IoT projects.</p>
-</section>
-
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <img src="your-image.jpg" alt="Alen's Profile" width="200" height="200" style="border-radius: 50%;">
+        <p>I am a CSE student passionate about web development and IoT projects.</p>
+    </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project-card">
-        <h3>Step Counter with Arduino</h3>
-        <p>A step counter using a piezoelectric sensor.</p>
-        <a href="your-github-link" class="btn">View Project</a>
-    </div>
-
-    <div class="project-card">
-        <h3>Voice-Controlled Wheelchair</h3>
-        <p>Currently in progress.</p>
-        <a href="#" class="btn">Coming Soon</a>
-    </div>
-</section>
-
+    <section id="projects" class="fade-in">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <h3>Step Counter with Arduino</h3>
+            <p>A step counter using a piezoelectric sensor.</p>
+            <a href="your-github-link" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+            <h3>Voice-Controlled Wheelchair</h3>
+            <p>Currently in progress.</p>
+            <a href="#" class="btn">Coming Soon</a>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-   <section id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <a href="https://github.com/alentj" target="_blank">
-        <img src=""download.png"g" alt="GitHub" width="30">
-    </a>
-    <a href="https://www.instagram.com/alen.tj_/" target="_blank">
-        <img src="download (1).png" alt="Instagram" width="30">
-    </a>
-       <p>📞 Contact me: <a href="tel:+917012752364">+91 7012752364</a></p>
-</section>
-</section>
-
-   
-</section>
-
-</section>
-
-</ul>
-
+    <section id="contact" class="fade-in">
+        <h2>Contact Me</h2>
+        <a href="https://github.com/alentj" target="_blank">
+            <img src="download.png" alt="GitHub" width="30">
+        </a>
+        <a href="https://www.instagram.com/alen.tj_/" target="_blank">
+            <img src="download (1).png" alt="Instagram" width="30">
+        </a>
+        <p>📞 Contact me: <a href="tel:+917012752364">+91 7012752364</a></p>
         <p>Email: mail2alentj@gmail.com</p>
     </section>
 
     <!-- Footer -->
     <footer>
-         Made for You Gaddiie
+        Made for You Gaddiie
     </footer>
-<script>
-const sections = document.querySelectorAll('.fade-in');
-window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight - 50) {
-            section.classList.add('show');
-        }
-    });
-});
-</script>
+
+    <script src="script.js"></script>
 </body>
 </html>
